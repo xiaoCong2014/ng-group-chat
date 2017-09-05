@@ -45,7 +45,13 @@
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "material-design-icons": "^3.0.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+
+    "jquery": "^3.2.1",
+    "@types/jquery": "^3.2.11",
+
+    "bootstrap": "^3.3.7",
+    "@types/bootstrap": "^3.3.35"
   },
 
   "devDependencies": {
