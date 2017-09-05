@@ -2,18 +2,16 @@ import { Component, OnInit } from '@angular/core';
 
 
 import * as io from 'socket.io-client';
-
+import { Message } from './model/message.model';
 // import { ChatService } from './chat/chat.service';
 
-
-export class Message {
-  type: string;
-  action: string;
-  user: string;
-  text: string;
-  timestamp: string;
-}
-
+// export class Message {
+//   type: string;
+//   action: string;
+//   user: string;
+//   text: string;
+//   timestamp: string;
+// }
 
 @Component({
   selector: 'app-root',
@@ -23,24 +21,24 @@ export class Message {
 })
 export class AppComponent implements OnInit {
 
-
   title = 'app';
 
   connectedUsers = [];
   messages = [];
-  message: Message; /* {
+  message: Message;
+
+  /* messages = {
     "type": "",
     "action": "",
     "user": "",
     "text": "",
     "timestamp": ""
   }; */
+
   messageText = '';
   areTyping = [];
 
   socket: SocketIOClient.Socket;
-
-
 
   constructor() {
     this.socket = io.connect('http://localhost:8000');
@@ -112,6 +110,19 @@ export class AppComponent implements OnInit {
     }.bind(this));
   }
 
+  /**
+   * 重置 Message 对象
+   * @param {Message} message
+   */
+  resetMessage( message: Message ) {
+
+    message.type = '';
+    message.user = '';
+    message.text = '';
+    message.timestamp = '';
+
+  }
+
   send() {
     let socket = this.socket;
 
@@ -122,9 +133,7 @@ export class AppComponent implements OnInit {
     // this.message.timestamp = moment().calendar();
 
     socket.emit('chat.message', this.message);
-    this.message.type = '';
-    this.message.user = '';
-    this.message.text = '';
-    this.message.timestamp = '';
+
+    this.resetMessage( this.message );
   }
 }
