@@ -24,7 +24,7 @@
       ],
 
       "scripts": [
-        "./assets/js/jquery-3.2.1-core.js",
+        "../node_modules/jquery/dist/jquery.min.js",
         "./assets/js/bootstrap-4.0.0-beta.min.js"
       ],
 
