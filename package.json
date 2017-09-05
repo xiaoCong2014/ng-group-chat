@@ -2,15 +2,32 @@
   "name": "ng-group-chat",
   "version": "0.0.0",
   "license": "MIT",
+
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+
+    "start": "ng serve --port 4202",
+
+    "start2": "ng serve --port 4202 && node src/app/backendServer/server.js",
+    "start3": "node ./src/app/backendServer/server.js",
+    "startFrontendServer": "ng serve --port 4202",
+    "startBackendServer": "node ./src/app/backendServer/server.js",
+    "startBackendServer2": "node E:/Angular/ng-group-chat/src/app/backendServer/server.js",
+
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+
+  "keywords": [
+    "ng group chat",
+    "chatty",
+    "chat room"
+  ],
+
   "private": true,
+
   "dependencies": {
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
@@ -23,8 +40,14 @@
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "material-design-icons": "^3.0.1",
+    "socket.io": "^2.0.3"
   },
+
   "devDependencies": {
     "@angular/cli": "1.3.0",
     "@angular/compiler-cli": "^4.2.4",
