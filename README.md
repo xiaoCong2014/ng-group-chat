@@ -32,6 +32,8 @@
 
 - 浏览器端js 使用了momentjs 处理时间相关的输出
 
+- 使用RxJs版本的可以参考： [Socket.io with RxJs in Angular](https://github.com/thelgevold/rxjs-socket.io)
+
 # 下面的是 ng cli 自动生成的
 
 # NgGroupChat
