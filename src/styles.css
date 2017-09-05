@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+#container{
+  display: none
+}
+
+#chat{
+  border: 1px solid green;
+  padding: 40px;
+  margin: 50px;
+}
