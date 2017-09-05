@@ -25,7 +25,8 @@
 
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-
+        "../node_modules/axios/dist/axios.js",
+        "../node_modules/moment/min/moment.min.js",
         "../node_modules/popper.js/dist/umd/popper.js",
         "./assets/js/bootstrap-4.0.0-beta.min.js"
       ],
