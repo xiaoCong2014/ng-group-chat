@@ -13,6 +13,14 @@
     node server.js  // 开发环境也可以使用 [nodemo](https://github.com/remy/nodemon) 工具替代node  
 ```     
 
+## 一些坑
+
+- ngModel绑定到input元素时 必须要有name属性 如果遗漏name="message" 是绑定不成功的--且不报错！
+
+~~~html
+   <input [(ngModel)]="message.text" type="text" class="form-control" name="message" id="message" placeholder="your message goes here!">
+~~~   
+
 
 ## 参考&&资料
 - 关于私聊功能 可以参考[chat-server.js](https://github.com/yiqing95/nodejs-chat-complete/blob/master/lib/chat-server.js)
@@ -31,6 +39,8 @@
 - 画图使用 [draw-io](https://www.draw.io)
 
 - 浏览器端js 使用了momentjs 处理时间相关的输出
+
+- 使用RxJs版本的可以参考： [Socket.io with RxJs in Angular](https://github.com/thelgevold/rxjs-socket.io)
 
 # 下面的是 ng cli 自动生成的
 
