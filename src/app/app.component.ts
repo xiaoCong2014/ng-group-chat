@@ -1,9 +1,20 @@
 import { Component } from '@angular/core';
 
+import { ChatService } from './chat/chat.service';
+
 export class User {
   id: number;
   name: string;
 }
+
+export class Message {
+  type: string;
+  action: string;
+  user: string;
+  text: string;
+  timestamp: string ;
+}
+
 
 const USERS: User[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -21,7 +32,8 @@ const USERS: User[] = [
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ChatService]
 })
 export class AppComponent {
 
@@ -29,4 +41,16 @@ export class AppComponent {
 
   users = USERS;
 
+  connectedUsers = [];
+  messages = [];
+  message = {
+    "type": "",
+    "action": "",
+    "user": "",
+    "text": "",
+    "timestamp": ""
+  };
+  areTyping = [];
+
+  constructor(private chatService: ChatService) { }
 }
