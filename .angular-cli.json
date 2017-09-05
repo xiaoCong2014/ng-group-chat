@@ -21,7 +21,12 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+
+      "scripts": [
+        "./assets/js/jquery-3.2.1-core.js",
+        "./assets/js/bootstrap-4.0.0-beta.min.js"
+      ],
+
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
