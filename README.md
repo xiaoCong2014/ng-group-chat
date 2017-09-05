@@ -13,6 +13,14 @@
     node server.js  // 开发环境也可以使用 [nodemo](https://github.com/remy/nodemon) 工具替代node  
 ```     
 
+## 一些坑
+
+- ngModel绑定到input元素时 必须要有name属性 如果遗漏name="message" 是绑定不成功的--且不报错！
+
+~~~html
+   <input [(ngModel)]="message.text" type="text" class="form-control" name="message" id="message" placeholder="your message goes here!">
+~~~   
+
 
 ## 参考&&资料
 - 关于私聊功能 可以参考[chat-server.js](https://github.com/yiqing95/nodejs-chat-complete/blob/master/lib/chat-server.js)
